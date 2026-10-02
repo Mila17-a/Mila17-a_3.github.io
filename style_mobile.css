@@ -1,0 +1,192 @@
+/* =========================
+   МОБИЛЬНАЯ ВЕРСИЯ — Mobile First
+   ========================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    color: #5a2a3c;
+}
+a {
+    color: #c2185b;
+}
+a:hover {
+    color: #880e4f;
+}
+h1,
+h2 {
+    color: #880e4f;
+}
+/* Шапка */
+#header {
+    width: 100%;
+    background-color: #f8c8dc;
+    padding: 10px 0;
+}
+/* Подвал */
+#footer {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #f8c8dc;
+}
+#footer p {
+    max-width: 960px;
+    margin: 0 auto;
+}
+/* Основной контейнер */
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+/* Шапка */
+#header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Логотип */
+.logo {
+    margin-bottom: 10px;
+}
+.logo img {
+    width: 80px;
+    display: block;
+}
+/* Название сайта */
+.sitename {
+    min-height: auto;
+}
+.sitename h1 {
+    margin: 0;
+    line-height: normal;
+    text-align: center;
+}
+/* =========================
+   МЕНЮ
+   ========================= */
+#menu {
+    width: 100%;
+    background-color: #fbd5e5;
+    padding: 10px 0;
+}
+/* На телефоне ссылки идут вертикально */
+#menu .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#menu a {
+    margin: 5px 0;
+    text-decoration: none;
+}
+#menu a:hover {
+    text-decoration: underline;
+}
+/* =========================
+   ОСНОВНОЙ КОНТЕНТ
+   ========================= */
+/*
+   Flexbox нужен для того, чтобы
+   менять порядок блоков на телефоне.
+*/
+main {
+    display: flex;
+    flex-direction: column;
+}
+/* Таблица визуально выше списка гиперссылок */
+#table {
+    order: 1;
+}
+/* Список гиперссылок */
+#links {
+    order: 2;
+}
+/* Форма */
+#form {
+    order: 3;
+}
+section {
+    width: 100%;
+    padding: 10px 0;
+}
+/* =========================
+   ТАБЛИЦА
+   ========================= */
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+}
+.schedule th,
+.schedule td {
+    border: 1px solid #d87093;
+    padding: 10px;
+    text-align: center;
+}
+.schedule th {
+    background-color: #f4a6c4;
+}
+/* Чётные строки */
+.schedule tbody tr:nth-child(even) {
+    background-color: #fde4ee;
+}
+/* Нечётные строки */
+.schedule tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+/* =========================
+   ПЛАНШЕТЫ И КОМПЬЮТЕРЫ
+   ========================= */
+min-width: 768px {
+    /* Шапка возвращается в горизонтальный вид */
+    #header .container {
+        flex-direction: row;
+        align-items: center;
+    }
+    .logo {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    .sitename {
+        min-height: 80px;
+    }
+    .sitename h1 {
+        line-height: 80px;
+        text-align: left;
+    }
+    /* Меню становится горизонтальным */
+    #menu .container {
+        flex-direction: row;
+        align-items: center;
+    }
+    #menu a {
+        margin-right: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    /*
+       На компьютере возвращаем
+       обычный порядок блоков
+    */
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    #links {
+        order: 1;
+    }
+    #table {
+        order: 2;
+    }
+    #form {
+        order: 3;
+    }
+    /*
+       Контент на больших экранах
+       ограничивается 960px
+    */
+    main .container {
+        max-width: 960px;
+    }
+}
