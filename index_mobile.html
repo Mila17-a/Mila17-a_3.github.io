@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Разработка Web-интерфейса</title>
+
+    <link rel="stylesheet" href="style_mobile.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="kubgu.jpg" alt="Логотип КубГу">
+            </div>
+            <div class="sitename">
+                <h1>Моя WEB-страница </h1>
+            </div>
+        </div>
+    </header>
+
+    <nav id="menu">
+        <div class="container">
+            <a href="#links">Гиперссылки</a>
+            <a href="#table">Таблица</a>
+            <a href="#form">Форма</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section id="links">
+
+            <h2>Гиперссылки</h2>
+
+            <ul>
+
+                <li>
+                    <a href="http://kubsu.ru/"> 1.КубГУ - HTTP </a>
+                </li>
+
+                <li>
+                    <a href="https://kubsu.ru/"> 2.КубГУ - HTTPS </a>
+                </li>
+
+                <li>
+                    <a href="https://kubsu.ru/">
+                        3.<img src="kubgu.jpg" alt="КубГУ" width="200">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html"> 4.Внутренняя страница</a>
+                </li>
+
+                <li>
+                    <a href="/"> 5.Главная страница</a>
+                </li>
+
+                <li>
+                    <a href="#form">6.Перейти к форме</a>
+                </li>
+
+                <li>
+                    <a href="https://example.com/?name=Milana&amp;age=19&amp;group=pi21/1">
+                        7.URL с тремя параметрами
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://example.com/?id=123">
+                        8.URL с параметром id
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./page.html">
+                        9.Страница текущего каталога
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./about/page.html">
+                        10.Страница в каталоге about
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../page.html">
+                        11.Страница на уровень выше
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../../page.html">
+                        12.Страница на два уровня выше
+                    </a>
+                </li>
+
+                <li>
+                    <p>
+                        13.Подробнее -
+                        <a href="https://kubsu.ru/">
+                            на официальном сайте КубГУ
+                        </a>.
+                    </p>
+                </li>
+
+                <li>
+                    <a href="https://ru.wikipedia.org/wiki/HTML#История">
+                        14.Фрагмент сторонней страницы
+                    </a>
+                </li>
+
+                <li>
+                    15.Карта ссылок:
+                    <img src="kubgu.jpg"
+                         alt="Карта ссылок"
+                         width="300"
+                         usemap="#kubgu-map">
+
+                    <map name="kubgu-map">
+                        <area shape="rect"
+                              coords="0,0,150,150"
+                              href="https://kubsu.ru/"
+                              alt="Прямоугольная область">
+
+                        <area shape="circle"
+                              coords="225,75,50"
+                              href="https://www.kubsu.ru/"
+                              alt="Круглая область">
+                    </map>
+                </li>
+
+                <li>
+                    <a href="">
+                        16.Ссылка с пустым href
+                    </a>
+                </li>
+
+                <li>
+                    <a>
+                        17.Ссылка без href
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://example.com/" rel="nofollow">
+                        18.Ссылка с nofollow
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://example.com/">
+                        19.Контент, запрещённый к индексации
+                    </a>
+                </li>
+
+                <li>
+                    <ol>
+                        <li>
+                            <a href="https://kubsu.ru/" title="20.Официальный сайт КубГУ">
+                                КубГУ
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.wikipedia.org/" title="Энциклопедия">
+                                Википедия
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/" title="Сервис GitHub">
+                                GitHub
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+
+
+                <li>
+                    <a href="ftp://student:password@example.com/file.txt">
+                        21.FTP-ссылка с авторизацией
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+
+        <section id="table">
+
+            <h2>Таблица</h2>
+
+            <table class="schedule">
+                <thead>
+                    <tr>
+                        <th>Время</th>
+                        <th>Понедельник</th>
+                        <th>Вторник</th>
+                        <th>Среда</th>
+                        <th>Четверг</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8:00</td>
+                        <td>Математика</td>
+                        <td>Физика</td>
+                        <td>Информатика</td>
+                        <td>Программирование</td>
+                    </tr>
+                    <tr>
+                        <td>9:40</td>
+                        <td>Английский язык</td>
+                        <td rowspan="2">Веб-разработка (лекция + практика)</td>
+                        <td>История</td>
+                        <td>Физика</td>
+                    </tr>
+                    <tr>
+                        <td>11:20</td>
+                        <td>Информатика</td>
+                        <td>Математика</td>
+                        <td>Английский язык</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Обеденный перерыв</td>
+                    </tr>
+                    <tr>
+                        <td>13:30</td>
+                        <td>Физкультура</td>
+                        <td>Программирование</td>
+                        <td colspan="2">Лабораторная работа</td>
+                    </tr>
+                    <tr>
+                        <td>15:10</td>
+                        <td>Базы данных</td>
+                        <td>Математика</td>
+                        <td>Физика</td>
+                        <td>Веб-разработка</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="form">
+
+            <h2>Форма</h2>
+
+            <form>
+
+                <p>
+                    <label>
+                        ФИО:
+                        <input type="text" name="nam" pattern="[А-Яа-яЁё\s]+" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Телефон:
+                        <input type="tel" name="telee" pattern="[0-9+\s\-]+" minlength="11" maxlength="12" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        E-mail:
+                        <input type="email" name="email" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Дата рождения:
+                        <input type="date" name="date" required>
+                    </label>
+                </p>
+
+                <p>
+                    Пол:
+                    <label>
+                        <input type="radio" name="m/g" value="men" required>
+                        Мужской
+                    </label>
+
+                    <label>
+                        <input type="radio" name="m/g" value="fem">
+                        Женский
+                    </label>
+                </p>
+
+                <p>
+                    Любимые языки программирования:
+                    <br>
+
+                    <select name="languages" multiple>
+                        <option value="pascal">Pascal</option>
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="php">PHP</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="haskel">Haskel</option>
+                        <option value="clojure">Clojure</option>
+                        <option value="prolog">Prolog</option>
+                        <option value="scala">Scala</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label>
+                        Биография:
+                        <br>
+                        <textarea name="biography" rows="6" cols="40"></textarea>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        <input type="checkbox" name="contract" required>
+                        С контрактом ознакомлен
+                    </label>
+                </p>
+
+                <p>
+                    <button type="submit">Сохранить</button>
+                </p>
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <p>(с) Магомадова Милана </p>
+    </footer>
+
+</body>
+</html>
