@@ -1,0 +1,202 @@
+/* =========================
+   Mobile First: базовые правила для смартфонов
+   ========================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    color: #5a2a3c;
+}
+
+a {
+    color: #c2185b;
+}
+
+a:hover {
+    color: #880e4f;
+}
+
+h1,
+h2 {
+    color: #880e4f;
+}
+
+/* Шапка: 100% ширины экрана */
+#header {
+    width: 100%;
+    background-color: #f8c8dc;
+    padding: 10px 0;
+}
+
+/* Подвал: 100% ширины экрана */
+#footer {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #f8c8dc;
+}
+
+#footer p {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Контейнер внутри шапки и меню */
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* На телефоне логотип и название в столбик */
+#header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 80px;
+    display: block;
+}
+
+.sitename h1 {
+    margin: 0;
+    text-align: center;
+}
+
+/* =========================
+   Меню: 100% ширины экрана
+   ========================= */
+#menu {
+    width: 100%;
+    background-color: #fbd5e5;
+    padding: 10px 0;
+}
+
+/* На телефоне ссылки вертикально */
+#menu .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu a {
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   Основной контент
+   ========================= */
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* На телефоне таблица выше списка ссылок */
+#table {
+    order: 1;
+}
+
+#links {
+    order: 2;
+}
+
+#form {
+    order: 3;
+}
+
+section {
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Таблица
+   ========================= */
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule th,
+.schedule td {
+    border: 1px solid #d87093;
+    padding: 10px;
+    text-align: center;
+}
+
+.schedule th {
+    background-color: #f4a6c4;
+}
+
+.schedule tbody tr:nth-child(even) {
+    background-color: #fde4ee;
+}
+
+.schedule tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* =========================
+   Планшеты и компьютеры (от 768px)
+   ========================= */
+@media screen and (min-width: 768px) {
+
+    /* Логотип и название в строку */
+    #header .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .sitename h1 {
+        text-align: left;
+    }
+
+    /* Меню горизонтально */
+    #menu .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #menu a {
+        margin: 0 20px 0 0;
+    }
+
+    /* Контент ограничен 960px и по центру */
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    /* На компьютере обычный порядок: ссылки, таблица, форма */
+    #links {
+        order: 1;
+    }
+
+    #table {
+        order: 2;
+    }
+
+    #form {
+        order: 3;
+    }
+
+}
